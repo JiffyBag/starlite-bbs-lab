@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STARLITE VIDEO BBS :: Rental Terminal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="crt">
+  <pre class="logo">
+  ███████╗████████╗ █████╗ ██████╗ ██╗     ██╗████████╗███████╗
+  ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██║     ██║╚══██╔══╝██╔════╝
+  ███████╗   ██║   ███████║██████╔╝██║     ██║   ██║   █████╗
+  ╚════██║   ██║   ██╔══██║██╔══██╗██║     ██║   ██║   ██╔══╝
+  ███████║   ██║   ██║  ██║██║  ██║███████╗██║   ██║   ███████╗
+  ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝   ╚══════╝
+         V I D E O   B B S   -   D I A L   U P   T O   F U N
+  </pre>
+
+  <div id="login-screen" class="panel">
+    <h2>&gt; LOGIN TO STARLITE BBS_</h2>
+    <input id="username" placeholder="username" value="guest">
+    <input id="password" placeholder="password" type="password" value="guest">
+    <button onclick="doLogin()">CONNECT</button>
+    <p id="login-msg" class="msg"></p>
+    <p class="hint">default creds: guest/guest or admin/admin123</p>
+  </div>
+
+  <div id="main-screen" class="panel hidden">
+    <div class="topbar">
+      <span id="whoami"></span>
+      <button onclick="logout()">DISCONNECT</button>
+    </div>
+
+    <h2>&gt; VHS CATALOG_</h2>
+    <div id="movies" class="grid"></div>
+
+    <h2>&gt; SNACK BAR_</h2>
+    <div id="snacks" class="grid"></div>
+
+    <h2>&gt; MY RENTALS_</h2>
+    <div id="rentals" class="grid"></div>
+
+    <p id="action-msg" class="msg"></p>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
